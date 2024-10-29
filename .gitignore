@@ -26,6 +26,8 @@ pip-selfcheck.json
 *.xlsx
 *.json
 .venv
+test.ipynb
+
 
 ### Python ###
 # Byte-compiled / optimized / DLL files

@@ -28,13 +28,11 @@ def make_request(url:str, headers:dict) -> dict:
         return response.json()
     except requests.exceptions.HTTPError as errh:
         logging.error("HTTP error ocurred: %s", errh, exc_info=True)
-    except requests.exceptions.ConnectionError as errc:
-        logging.error("Connection error ocurred: %s", errc, exc_info=True)
     except requests.exceptions.Timeout as errt:
         logging.error("Timeout error: the request took too long to complete: %s", errt, exc_info=True)
     except requests.exceptions.RequestException as err:
         logging.error("An unexpected error ocurred with the request: %s", err, exc_info=True)
-    return {}
+    return {} 
 
 if __name__ == '__main__':
     main()
